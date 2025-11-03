@@ -55,13 +55,14 @@ we don't want a one page site. instead, have pages for:
 - homepage with softmax introduction and naming explanation
 - residents page with detailed profiles (easily extensible for more residents)
 - ethos page with core principles
-- vibes page with photo gallery (12 placeholder slots ready for photos)
+- vibes page with photo gallery (automatically reads from public/vibes/)
 - calendar page with luma embed
 - join page with notion form embed
-- navigation bar with active state indication
+- navigation bar with active state indication and mobile hamburger menu
 - warm/cozy color theme using oklch color space
-- fully responsive design
+- fully responsive design (mobile-first approach)
 - all shadcn/ui components utilized throughout
+- automatic logo and photo loading from public directories
 
 ### theme customization
 - colors shifted to warm tones (beige/cream background with earth tones)

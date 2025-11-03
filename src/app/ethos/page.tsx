@@ -23,20 +23,20 @@ const principles = [
 
 export default function EthosPage() {
   return (
-    <div className="mx-auto max-w-2xl px-6 py-24">
-      <div className="space-y-16">
+    <div className="mx-auto max-w-2xl px-4 sm:px-6 py-16 sm:py-24">
+      <div className="space-y-12 sm:space-y-16">
         <div className="space-y-2">
-          <h1 className="text-4xl font-semibold tracking-tight">ethos</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">ethos</h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
             the principles that guide us
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           {principles.map((principle) => (
             <div key={principle.title} className="space-y-2">
-              <h2 className="text-xl font-medium">{principle.title}</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <h2 className="text-lg sm:text-xl font-medium">{principle.title}</h2>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {principle.description}
               </p>
             </div>

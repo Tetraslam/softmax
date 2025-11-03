@@ -25,16 +25,16 @@ const logoLinks: Record<string, string> = {
 export default function Home() {
   const logos = getLogos();
   return (
-    <div className="mx-auto max-w-4xl px-6 py-24">
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-8">
         <div className="space-y-4">
-          <h1 className="text-5xl font-semibold tracking-tight">softmax</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">softmax</h1>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
             a cozy hacker home in sf where good people build great things :3
           </p>
         </div>
 
-        <div className="space-y-6 text-muted-foreground max-w-2xl">
+        <div className="space-y-6 text-sm sm:text-base text-muted-foreground max-w-2xl">
           <p>
             we&apos;re a group of friends working on ai, fintech, art, music,
             robots, hardware, and everything in between. everyone here is
@@ -60,18 +60,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex gap-4 pt-4">
-          <Button asChild>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+          <Button asChild className="w-full sm:w-auto">
             <Link href="/residents">meet the residents</Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild className="w-full sm:w-auto">
             <Link href="/join">join us</Link>
           </Button>
         </div>
 
-        <div className="pt-12 space-y-6">
+        <div className="pt-8 sm:pt-12 space-y-6">
           <p className="text-sm text-muted-foreground">building from</p>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             {logos.map((logo) => {
               const isSvg = logo.endsWith(".svg");
 

@@ -49,35 +49,35 @@ const residents = [
 
 export default function ResidentsPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-24">
-      <div className="space-y-16">
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 py-16 sm:py-24">
+      <div className="space-y-12 sm:space-y-16">
         <div className="space-y-2">
-          <h1 className="text-4xl font-semibold tracking-tight">residents</h1>
-          <p className="text-muted-foreground">the people making things happen</p>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">residents</h1>
+          <p className="text-sm sm:text-base text-muted-foreground">the people making things happen</p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           {residents.map((resident, index) => (
             <div key={resident.name}>
-              {index > 0 && <div className="border-t border-border mb-12" />}
-              <div className="space-y-6">
-                <div className="flex gap-6 items-start">
+              {index > 0 && <div className="border-t border-border mb-10 sm:mb-12" />}
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
                   {resident.photo && (
                     <div className="shrink-0">
                       <Image
                         src={`/residents/${resident.photo}`}
                         alt={resident.name}
-                        width={96}
-                        height={96}
-                        className="rounded-lg object-cover"
+                        width={80}
+                        height={80}
+                        className="rounded-lg object-cover sm:w-24 sm:h-24"
                       />
                     </div>
                   )}
                   <div className="space-y-1">
-                    <h2 className="text-2xl font-semibold">{resident.name}</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold">{resident.name}</h2>
                     <div className="space-y-0.5">
                       {resident.roles.map((role) => (
-                        <p key={role} className="text-sm text-muted-foreground">
+                        <p key={role} className="text-xs sm:text-sm text-muted-foreground">
                           {role}
                         </p>
                       ))}
@@ -86,20 +86,20 @@ export default function ResidentsPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     {resident.hobbies.join(", ")}
                   </p>
                 </div>
 
                 {resident.links.length > 0 && (
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {resident.links.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-primary hover:underline"
+                        className="text-xs sm:text-sm text-primary hover:underline"
                       >
                         {link.label}
                       </Link>

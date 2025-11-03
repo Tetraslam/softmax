@@ -28,11 +28,11 @@ export default function VibesPage() {
 
   if (photos.length === 0) {
     return (
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
         <div className="space-y-8">
           <div className="space-y-2">
-            <h1 className="text-4xl font-semibold tracking-tight">vibes</h1>
-            <p className="text-muted-foreground">moments from the house</p>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">vibes</h1>
+            <p className="text-sm sm:text-base text-muted-foreground">moments from the house</p>
           </div>
           <p className="text-sm text-muted-foreground text-center">
             no photos yet — add some to public/vibes/
@@ -43,11 +43,11 @@ export default function VibesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-24">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-8">
         <div className="space-y-2">
-          <h1 className="text-4xl font-semibold tracking-tight">vibes</h1>
-          <p className="text-muted-foreground">moments from the house (will be filled with those once we move in!)</p>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">vibes</h1>
+          <p className="text-sm sm:text-base text-muted-foreground">moments from the house (will be filled with those once we move in!)</p>
         </div>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
