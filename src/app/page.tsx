@@ -19,7 +19,8 @@ const logoLinks: Record<string, string> = {
   "mit.svg": "https://mit.edu",
   "northeastern.png": "https://northeastern.edu",
   "natural.svg": "https://natural.co",
-  "sakana.webp": "https://sakana.ai"
+  "sakana.webp": "https://sakana.ai",
+  "medialab.png": "https://media.mit.edu"
 };
 
 export default function Home() {
