@@ -1,42 +1,85 @@
-To get started:
+# softmax
+
+**a cozy hacker home in sf where good people build great things**
+
+## quick start
 
 ```sh
 pnpm i
 pnpm dev
 ```
 
-branding ideas
-- title: "softmax"
-- subtitle: "a cozy hacker home in sf where good people build great things"
-- frens (the softmaxxers): show picture + main orgs (company, university, lab, etc), hobbies, links
-- the house (ghiblified diagram, game exclamation marks and on hover show details of the house like rooms, console, tv, balcony/yard, books, games, hardware, etc)
-- principles (be kind, do great work, spend time with friends, low ego)
-- join us (embedded notion form)
-- vibes (photos/art of meals, whiteboards, hiking, views, trips, etc)
-- house calendar (luma with group meals, brunches, picnics, trips, karaoke, movie nights, etc)
-- aesthetic to use is like pastel matcha, soft lavender, warm cream, sky blue, etc. basically studio ghibli.
-- typography: one friendly rounded sans and one playful handwritten (but still very readable) accent
-- graphics style like studio ghibli
+for the aesthetics, make it minimal as fuck but keep the softmax aura.
+
+we don't want a one page site. instead, have pages for:
+- the homepage (what softmax house is)
+- residents
+- ethos (be kind, do great work, spend time with friends, low ego)
+- join us (<iframe src="https://tetraslam.notion.site/ebd/2942133a075780c5ae65f9925c2fd7da" width="100%" height="600" frameborder="0" allowfullscreen /> )
+- vibes (photo gallery)
+- calendar (<iframe src="https://luma.com/embed/calendar/cal-MIQpFDZwaWmvv5L/events" width="600" height="450" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe> )
+
+### technical stack
+- next.js 16 (app router)
+- react 19
+- typescript
+- tailwind css v4
+- shadcn/ui components
+- biome for linting
 
 
-the residents (2 confirmed for now; there'll be more later since we're working through all the applications we got)
-- shresht bhowmick: Founding Engineer @ Natural.co (Payments for AI Agents), 2nd year @ Northeastern CS & Linguistics, ML Research @ MIT Media Lab, hobbies are worldbuilding, shoegaze rock, scuba diving, kpop, anime, roguelike videogames. x.com/tetraslam, linkedin.com/in/shreshtbhowmick, tetraslam.world
-- william feng: Research Resident @ OpenAI, 2nd year @ MIT EE, hobbies are electronics/hardware projects, machining, kpop, violin (first chair on mit video game orchestra)
 
 
-notion embed
+## the residents
 
-<iframe src="https://tetraslam.notion.site/ebd/2942133a075780c5ae65f9925c2fd7da" width="100%" height="600" frameborder="0" allowfullscreen />
+2 confirmed so far (imply more but don't make anything saying like "2 now, more later" or anything just make it easy to change)
 
-luma embed
+### shresht bhowmick
+- founding engineer @ natural.co (payments for ai agents)
+- 2nd year @ northeastern cs & linguistics
+- ml research @ mit media lab
+- hobbies: worldbuilding, shoegaze rock, scuba diving, kpop, anime, roguelike videogames
+- links: [x.com/tetraslam](https://x.com/tetraslam), [linkedin.com/in/shreshtbhowmick](https://linkedin.com/in/shreshtbhowmick), [tetraslam.world](https://tetraslam.world)
 
-<iframe
-  src="https://luma.com/embed/calendar/cal-MIQpFDZwaWmvv5L/events"
-  width="600"
-  height="450"
-  frameborder="0"
-  style="border: 1px solid #bfcbda88; border-radius: 4px;"
-  allowfullscreen=""
-  aria-hidden="false"
-  tabindex="0"
-></iframe>
+### william feng
+- research resident @ openai
+- 2nd year @ mit ee
+- hobbies: electronics/hardware projects, machining, kpop, violin
+- first chair on mit video game orchestra
+
+---
+
+## implementation notes
+
+### completed features
+- homepage with softmax introduction and naming explanation
+- residents page with detailed profiles (easily extensible for more residents)
+- ethos page with core principles
+- vibes page with photo gallery (12 placeholder slots ready for photos)
+- calendar page with luma embed
+- join page with notion form embed
+- navigation bar with active state indication
+- warm/cozy color theme using oklch color space
+- fully responsive design
+- all shadcn/ui components utilized throughout
+
+### theme customization
+- colors shifted to warm tones (beige/cream background with earth tones)
+- dark mode with warm browns/tans instead of pure black for coziness
+- theme toggle in nav bar (respects system preference by default)
+- smooth transitions between themes
+- reduced border radius for cleaner look
+- subtle color variations for cozy feel
+- maintained high readability with proper contrast in both modes
+
+### adding residents
+edit `src/app/residents/page.tsx` and add to the `residents` array. add resident photos to `public/residents/` directory (e.g., `shresht.png`) and update the `photo` field in the resident object to match the filename.
+
+### adding vibes photos
+add photos to `public/vibes/` and they'll automatically appear. optionally add captions by editing the `photoLabels` object in `src/app/vibes/page.tsx` to map filename to caption.
+
+### adding logo links
+add logos to `public/homelogos/` and they'll automatically appear. optionally add links by editing the `logoLinks` object in `src/app/page.tsx` to map filename to URL.
+
+---
+
