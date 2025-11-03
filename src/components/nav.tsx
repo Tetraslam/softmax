@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -30,8 +31,15 @@ export function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-lg font-medium tracking-tight">
-            softmax
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.svg"
+              alt="softmax"
+              width={24}
+              height={24}
+              className="dark:invert"
+            />
+            <span className="text-lg font-medium tracking-tight">softmax</span>
           </Link>
 
           {/* Desktop nav */}
@@ -180,24 +188,24 @@ export function Nav() {
                   <span className="sr-only">Menu</span>
                 </Button>
               </SheetTrigger>
-               <SheetContent side="top" className="px-6 pb-12">
-                 <div className="flex flex-col gap-6 mt-8">
-                   {links.map((link) => (
-                     <Link
-                       key={link.href}
-                       href={link.href}
-                       onClick={() => setOpen(false)}
-                       className={`text-lg transition-colors ${
-                         pathname === link.href
-                           ? "text-foreground font-medium"
-                           : "text-muted-foreground hover:text-foreground"
-                       }`}
-                     >
-                       {link.label}
-                     </Link>
-                   ))}
-                 </div>
-               </SheetContent>
+              <SheetContent side="top" className="px-6 pb-12">
+                <div className="flex flex-col gap-6 mt-8">
+                  {links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className={`text-lg transition-colors ${
+                        pathname === link.href
+                          ? "text-foreground font-medium"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </SheetContent>
             </Sheet>
           </div>
         </div>

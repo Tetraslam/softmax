@@ -58,9 +58,12 @@ we don't want a one page site. instead, have pages for:
 - vibes page with photo gallery (automatically reads from public/vibes/)
 - calendar page with luma embed
 - join page with notion form embed
-- navigation bar with active state indication and mobile hamburger menu
+- navigation bar with active state indication and mobile hamburger menu (slides from top)
+- custom S-curve logo inspired by softmax function
+- custom favicon
 - warm/cozy color theme using oklch color space
 - fully responsive design (mobile-first approach)
+- consistent max-width across pages (max-w-4xl, except vibes which is max-w-6xl)
 - all shadcn/ui components utilized throughout
 - automatic logo and photo loading from public directories
 

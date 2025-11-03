@@ -16,7 +16,7 @@ function getLogos() {
 
 const logoLinks: Record<string, string> = {
   "openai.png": "https://openai.com",
-  "mit.png": "https://mit.edu",
+  "mit.svg": "https://mit.edu",
   "northeastern.png": "https://northeastern.edu",
   "natural.svg": "https://natural.co",
   "sakana.webp": "https://sakana.ai"
@@ -69,9 +69,9 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="pt-8 sm:pt-12 space-y-6">
+        <div className="pt-8 sm:pt-12 space-y-4">
           <p className="text-sm text-muted-foreground">building from</p>
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-start">
             {logos.map((logo) => {
               const isSvg = logo.endsWith(".svg");
 
