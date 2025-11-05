@@ -45,14 +45,14 @@ export default function Home() {
             our name comes from the{" "}
             <Link
               href="https://en.wikipedia.org/wiki/Softmax_function"
-              className="underline underline-offset-4"
+              className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-colors"
             >
               mathematical function
             </Link>{" "}
             used in the{" "}
             <Link
               href="https://arxiv.org/pdf/1706.03762"
-              className="underline underline-offset-4"
+              className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-colors"
             >
               attention mechanism of the transformer architecture
             </Link>

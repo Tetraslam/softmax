@@ -61,6 +61,13 @@ we don't want a one page site. instead, have pages for:
 - navigation bar with active state indication and mobile hamburger menu (slides from top)
 - custom S-curve logo inspired by softmax function
 - custom favicon
+- subtle footer with contact email
+- custom 404 page
+- custom scrollbar styling (light and dark mode)
+- refined link styles with subtle underlines that intensify on hover
+- custom focus states for better keyboard navigation
+- open graph and twitter card metadata for social sharing
+- vercel analytics for traffic insights
 - warm/cozy color theme using oklch color space
 - fully responsive design (mobile-first approach)
 - consistent max-width across pages (max-w-4xl, except vibes which is max-w-6xl)
@@ -84,6 +91,12 @@ add photos to `public/vibes/` and they'll automatically appear. optionally add c
 
 ### adding logo links
 add logos to `public/homelogos/` and they'll automatically appear. optionally add links by editing the `logoLinks` object in `src/app/page.tsx` to map filename to URL.
+
+### social sharing
+the site includes Open Graph tags for better sharing on social media. to create the OG image:
+1. convert `public/og-image.svg` to PNG (1200x630px)
+2. save as `public/og-image.png`
+3. the metadata in `src/app/layout.tsx` is already configured
 
 ---
 

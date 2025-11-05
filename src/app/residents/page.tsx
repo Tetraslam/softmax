@@ -99,7 +99,7 @@ export default function ResidentsPage() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs sm:text-sm text-primary hover:underline"
+                        className="text-xs sm:text-sm text-foreground underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition-colors"
                       >
                         {link.label}
                       </Link>

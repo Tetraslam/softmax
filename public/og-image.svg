@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FAF9F7"/>
+  
+  <!-- Logo -->
+  <g transform="translate(100, 180)">
+    <path d="M12 72C12 72 30 72 48 42C66 12 84 12 84 12" stroke="#3F3936" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 84C12 84 30 84 48 54C66 24 84 24 84 24" stroke="#3F3936" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="220" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="96" font-weight="600" fill="#0F0D0C" letter-spacing="-2">softmax</text>
+  <text x="220" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="36" fill="#78716C" font-weight="400">a cozy hacker home in sf where</text>
+  <text x="220" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="36" fill="#78716C" font-weight="400">good people build great things</text>
+</svg>
+

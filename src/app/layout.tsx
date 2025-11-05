@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +21,28 @@ export const metadata: Metadata = {
   description: "a cozy hacker home in sf where good people build great things",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "softmax",
+    description: "a cozy hacker home in sf where good people build great things",
+    url: "https://softmax.house",
+    siteName: "softmax",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "softmax - a cozy hacker home in sf",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "softmax",
+    description: "a cozy hacker home in sf where good people build great things",
+    images: ["/og-image.png"],
   },
 };
 
@@ -40,6 +64,8 @@ export default function RootLayout({
         >
           <Nav />
           <main className="pt-16">{children}</main>
+          <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
