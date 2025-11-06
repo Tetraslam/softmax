@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ResidentPhoto } from "@/components/resident-photo";
 
 const residents = [
   {
@@ -63,15 +63,10 @@ export default function ResidentsPage() {
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
                   {resident.photo && (
-                    <div className="shrink-0">
-                      <Image
-                        src={`/residents/${resident.photo}`}
-                        alt={resident.name}
-                        width={80}
-                        height={80}
-                        className="rounded-lg object-cover sm:w-24 sm:h-24"
-                      />
-                    </div>
+                    <ResidentPhoto
+                      src={`/residents/${resident.photo}`}
+                      alt={resident.name}
+                    />
                   )}
                   <div className="space-y-1">
                     <h2 className="text-xl sm:text-2xl font-semibold">{resident.name}</h2>

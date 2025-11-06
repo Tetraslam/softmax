@@ -49,13 +49,18 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm transition-colors ${
+                  className={`text-sm transition-colors relative group ${
                     pathname === link.href
                       ? "text-foreground font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {link.label}
+                  <span className={`absolute -bottom-0.5 left-0 h-px bg-primary transition-all duration-300 ${
+                    pathname === link.href 
+                      ? "w-full" 
+                      : "w-0 group-hover:w-full"
+                  }`} />
                 </Link>
               ))}
             </div>

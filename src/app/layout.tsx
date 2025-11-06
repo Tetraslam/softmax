@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FDFBF6" },
+    { media: "(prefers-color-scheme: dark)", color: "#3A3328" },
+  ],
   openGraph: {
     title: "softmax",
     description:
@@ -62,7 +66,6 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
         >
           <Nav />
           <main className="pt-16 flex-1">{children}</main>

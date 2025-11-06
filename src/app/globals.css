@@ -115,11 +115,23 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
   body {
     @apply bg-background text-foreground;
   }
-  
+
+  /* Custom text selection */
+  ::selection {
+    background: oklch(0.45 0.08 45 / 0.3);
+    color: oklch(0.25 0.01 85);
+  }
+
+  .dark ::selection {
+    background: oklch(0.65 0.12 50 / 0.4);
+    color: oklch(0.95 0.005 85);
+  }
+
   /* Better link styles */
   a {
     transition: all 0.2s ease;

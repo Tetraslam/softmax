@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import path from "path";
 import { Button } from "@/components/ui/button";
+import { HomepageGreeting } from "@/components/homepage-greeting";
+import { CozyFace } from "@/components/cozy-face";
 
 function getLogos() {
   const logosDir = path.join(process.cwd(), "public", "homelogos");
@@ -31,8 +33,9 @@ export default function Home() {
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">softmax</h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
-            a cozy hacker home in sf where good people build great things :3
+            a cozy hacker home in sf where good people build great things <CozyFace />
           </p>
+          <HomepageGreeting />
         </div>
 
         <div className="space-y-6 text-sm sm:text-base text-muted-foreground max-w-2xl">

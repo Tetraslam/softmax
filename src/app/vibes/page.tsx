@@ -1,6 +1,6 @@
 import fs from "fs";
-import Image from "next/image";
 import path from "path";
+import { VibesGallery } from "@/components/vibes-gallery";
 
 function getPhotos() {
   const vibesDir = path.join(process.cwd(), "public", "vibes");
@@ -50,30 +50,7 @@ export default function VibesPage() {
           <p className="text-sm sm:text-base text-muted-foreground">moments from the house (will be filled with those once we move in!)</p>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-          {photos.map((photo) => (
-            <div key={photo} className="break-inside-avoid mb-4">
-              <div className="rounded-lg border border-border overflow-hidden bg-card">
-                <div className="relative w-full">
-                  <Image
-                    src={`/vibes/${photo}`}
-                    alt={photoLabels[photo] || ""}
-                    width={600}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-                {photoLabels[photo] && (
-                  <div className="px-3 py-2 border-t border-border">
-                    <p className="text-xs text-muted-foreground">
-                      {photoLabels[photo]}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+        <VibesGallery photos={photos} photoLabels={photoLabels} />
       </div>
     </div>
   );

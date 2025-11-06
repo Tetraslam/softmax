@@ -53,21 +53,27 @@ we don't want a one page site. instead, have pages for:
 
 ### completed features
 - homepage with softmax introduction and naming explanation
+- personalized time-based greeting with random endearing adjectives and nicknames
+- interactive :3 emoticon with hover effect
 - residents page with detailed profiles (easily extensible for more residents)
-- ethos page with core principles
+- ethos page with core principles and color-coded accent bars
 - vibes page with photo gallery (automatically reads from public/vibes/)
 - calendar page with luma embed
 - join page with notion form embed
-- navigation bar with active state indication and mobile hamburger menu (slides from top)
+- navigation bar with active state indication, smooth underline hover effects, and mobile hamburger menu (slides from top)
 - custom S-curve logo inspired by softmax function
 - custom favicon
 - subtle footer with contact email
 - custom 404 page
 - custom scrollbar styling (light and dark mode)
+- custom text selection colors matching warm theme
 - refined link styles with subtle underlines that intensify on hover
 - custom focus states for better keyboard navigation
+- smooth theme transitions (300ms color breathing effect)
+- subtle loading states for photos (residents and vibes pages)
 - open graph and twitter card metadata for social sharing
 - vercel analytics for traffic insights
+- meta theme-color for mobile browser chrome
 - warm/cozy color theme using oklch color space
 - fully responsive design (mobile-first approach)
 - consistent max-width across pages (max-w-4xl, except vibes which is max-w-6xl)
