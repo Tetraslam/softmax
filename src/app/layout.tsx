@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Nav } from "@/components/nav";
-import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { Footer } from "@/components/footer";
+import { Nav } from "@/components/nav";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "softmax",
-    description: "a cozy hacker home in sf where good people build great things",
+    description:
+      "a cozy hacker home in sf where good people build great things",
     url: "https://softmax.house",
     siteName: "softmax",
     images: [
@@ -41,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "softmax",
-    description: "a cozy hacker home in sf where good people build great things",
+    description:
+      "a cozy hacker home in sf where good people build great things",
     images: ["/og-image.png"],
   },
 };
@@ -54,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
@@ -63,7 +65,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Nav />
-          <main className="pt-16">{children}</main>
+          <main className="pt-16 flex-1">{children}</main>
           <Footer />
           <Analytics />
         </ThemeProvider>
