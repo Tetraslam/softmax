@@ -54,13 +54,6 @@ export default function Home() {
               className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-colors"
             >
               mathematical function
-            </Link>{" "}
-            used in the{" "}
-            <Link
-              href="https://arxiv.org/pdf/1706.03762"
-              className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-colors"
-            >
-              attention mechanism of the transformer architecture
             </Link>
             , and also the fact that we&apos;re just soft and cozy people who
             like building hard things together :)
