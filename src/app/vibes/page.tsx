@@ -20,6 +20,8 @@ const photoLabels: Record<string, string> = {
   "meinmydorm.webp": "shresht in his dorm right after moving in",
   "hackbrown.webp": "shresht and friends going to Hack Brown 2025",
   "godfather.webp": "prom",
+  "bill-hiking.jpg": "bill and the boys find themselves in the woods",
+  "bill-ma-statehouse.jpg": "delivering petitions to ma. state house",
   // add more captions by mapping filename to caption text
 };
 

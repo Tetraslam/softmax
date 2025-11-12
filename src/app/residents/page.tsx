@@ -33,11 +33,14 @@ const residents = [
     roles: [
       "research resident @ openai",
       "2nd year @ mit ee",
-      "first chair on mit video game orchestra",
+      "mit video game orchestra",
     ],
-    hobbies: ["electronics/hardware projects", "machining", "kpop", "violin"],
+    hobbies: ["electronics", "machining", "game dev", "kpop", "violin"],
     links: [
-      { label: "x.com/_womogenes", href: "https://x.com/_womogenes" },
+      {
+        label: "twitter.com/_womogenes",
+        href: "https://twitter.com/_womogenes",
+      },
       {
         label: "linkedin.com/in/womogenes",
         href: "https://www.linkedin.com/in/womogenes/",
