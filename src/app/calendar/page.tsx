@@ -3,7 +3,9 @@ export default function CalendarPage() {
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-8">
         <div className="space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">calendar</h1>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+            calendar
+          </h1>
           <p className="text-sm sm:text-base text-muted-foreground">
             upcoming events and hangouts
           </p>
@@ -25,4 +27,3 @@ export default function CalendarPage() {
     </div>
   );
 }
-

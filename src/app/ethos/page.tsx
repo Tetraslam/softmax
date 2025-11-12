@@ -30,7 +30,9 @@ export default function EthosPage() {
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-12 sm:space-y-16">
         <div className="space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">ethos</h1>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+            ethos
+          </h1>
           <p className="text-sm sm:text-base text-muted-foreground">
             the principles that guide us
           </p>
@@ -42,7 +44,9 @@ export default function EthosPage() {
               key={principle.title}
               className={`border-l-[3px] pl-4 sm:pl-6 space-y-2 ${principle.color}`}
             >
-              <h2 className="text-lg sm:text-xl font-medium">{principle.title}</h2>
+              <h2 className="text-lg sm:text-xl font-medium">
+                {principle.title}
+              </h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {principle.description}
               </p>
@@ -53,4 +57,3 @@ export default function EthosPage() {
     </div>
   );
 }
-

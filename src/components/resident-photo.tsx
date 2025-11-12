@@ -29,4 +29,3 @@ export function ResidentPhoto({ src, alt }: ResidentPhotoProps) {
     </div>
   );
 }
-

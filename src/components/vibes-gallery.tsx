@@ -48,4 +48,3 @@ export function VibesGallery({ photos, photoLabels }: VibesGalleryProps) {
     </div>
   );
 }
-

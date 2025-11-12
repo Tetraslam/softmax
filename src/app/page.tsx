@@ -22,7 +22,7 @@ const logoLinks: Record<string, string> = {
   "northeastern.png": "https://northeastern.edu",
   "natural.svg": "https://natural.co",
   "sakana.webp": "https://sakana.ai",
-  "medialab.png": "https://media.mit.edu"
+  "medialab.png": "https://media.mit.edu",
 };
 
 export default function Home() {
@@ -31,9 +31,12 @@ export default function Home() {
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-8">
         <div className="space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">softmax</h1>
+          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+            softmax
+          </h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
-            a cozy hacker home in sf where good people build great things <CozyFace />
+            a cozy hacker home in sf where good people build great things{" "}
+            <CozyFace />
           </p>
           <HomepageGreeting />
         </div>
@@ -101,7 +104,10 @@ export default function Home() {
               }
 
               return (
-                <div key={logo} className="h-8 w-24 opacity-60 grayscale dark:invert">
+                <div
+                  key={logo}
+                  className="h-8 w-24 opacity-60 grayscale dark:invert"
+                >
                   <Image
                     src={`/homelogos/${logo}`}
                     alt=""

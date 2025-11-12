@@ -52,14 +52,20 @@ export default function ResidentsPage() {
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-12 sm:space-y-16">
         <div className="space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">residents</h1>
-          <p className="text-sm sm:text-base text-muted-foreground">the people making things happen</p>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+            residents
+          </h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
+            the people making things happen
+          </p>
         </div>
 
         <div className="space-y-10 sm:space-y-12">
           {residents.map((resident, index) => (
             <div key={resident.name}>
-              {index > 0 && <div className="border-t border-border mb-10 sm:mb-12" />}
+              {index > 0 && (
+                <div className="border-t border-border mb-10 sm:mb-12" />
+              )}
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
                   {resident.photo && (
@@ -69,10 +75,15 @@ export default function ResidentsPage() {
                     />
                   )}
                   <div className="space-y-1">
-                    <h2 className="text-xl sm:text-2xl font-semibold">{resident.name}</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold">
+                      {resident.name}
+                    </h2>
                     <div className="space-y-0.5">
                       {resident.roles.map((role) => (
-                        <p key={role} className="text-xs sm:text-sm text-muted-foreground">
+                        <p
+                          key={role}
+                          className="text-xs sm:text-sm text-muted-foreground"
+                        >
                           {role}
                         </p>
                       ))}

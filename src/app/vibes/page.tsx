@@ -19,7 +19,7 @@ const photoLabels: Record<string, string> = {
   "dorm.webp": "shresht with parents",
   "meinmydorm.webp": "shresht in his dorm right after moving in",
   "hackbrown.webp": "shresht and friends going to Hack Brown 2025",
-  "godfather.webp": "prom"
+  "godfather.webp": "prom",
   // add more captions by mapping filename to caption text
 };
 
@@ -31,8 +31,12 @@ export default function VibesPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
         <div className="space-y-8">
           <div className="space-y-2">
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">vibes</h1>
-            <p className="text-sm sm:text-base text-muted-foreground">moments from the house</p>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+              vibes
+            </h1>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              moments from the house
+            </p>
           </div>
           <p className="text-sm text-muted-foreground text-center">
             no photos yet — add some to public/vibes/
@@ -46,8 +50,12 @@ export default function VibesPage() {
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
       <div className="space-y-8">
         <div className="space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">vibes</h1>
-          <p className="text-sm sm:text-base text-muted-foreground">moments from the house (will be filled with those once we move in!)</p>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+            vibes
+          </h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
+            moments from the house (will be filled with those once we move in!)
+          </p>
         </div>
 
         <VibesGallery photos={photos} photoLabels={photoLabels} />

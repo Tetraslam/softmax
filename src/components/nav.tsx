@@ -56,11 +56,13 @@ export function Nav() {
                   }`}
                 >
                   {link.label}
-                  <span className={`absolute -bottom-0.5 left-0 h-px bg-primary transition-all duration-300 ${
-                    pathname === link.href 
-                      ? "w-full" 
-                      : "w-0 group-hover:w-full"
-                  }`} />
+                  <span
+                    className={`absolute -bottom-0.5 left-0 h-px bg-primary transition-all duration-300 ${
+                      pathname === link.href
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </Link>
               ))}
             </div>

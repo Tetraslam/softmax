@@ -17,7 +17,7 @@ const nicknames = [
   "hacker",
   "artist",
   "friend",
-]
+];
 
 const adjectives = [
   "brilliant",
@@ -44,7 +44,7 @@ export function HomepageGreeting() {
   useEffect(() => {
     const hour = new Date().getHours();
     let timeGreeting = "";
-    
+
     if (hour < 12) {
       timeGreeting = "good morning";
     } else if (hour < 18) {
@@ -52,12 +52,14 @@ export function HomepageGreeting() {
     } else {
       timeGreeting = "good evening";
     }
-    
+
     setGreeting(timeGreeting);
-    
+
     // Pick random nickname and adjective consistently for this session
-    const randomNickname = nicknames[Math.floor(Math.random() * nicknames.length)];
-    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomNickname =
+      nicknames[Math.floor(Math.random() * nicknames.length)];
+    const randomAdjective =
+      adjectives[Math.floor(Math.random() * adjectives.length)];
     setNickname(randomNickname);
     setAdjective(randomAdjective);
   }, []);
@@ -70,4 +72,3 @@ export function HomepageGreeting() {
     </p>
   );
 }
-
