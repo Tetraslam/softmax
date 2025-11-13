@@ -2,9 +2,9 @@ import fs from "fs";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
-import { Button } from "@/components/ui/button";
-import { HomepageGreeting } from "@/components/homepage-greeting";
 import { CozyFace } from "@/components/cozy-face";
+import { HomepageGreeting } from "@/components/homepage-greeting";
+import { Button } from "@/components/ui/button";
 
 function getLogos() {
   const logosDir = path.join(process.cwd(), "public", "homelogos");
@@ -23,6 +23,9 @@ const logoLinks: Record<string, string> = {
   "natural.svg": "https://natural.co",
   "sakana.webp": "https://sakana.ai",
   "medialab.png": "https://media.mit.edu",
+  "osmosis.png": "https://osmosis.ai",
+  "notability.png": "https://notability.com",
+  "aws.png": "https://aws.amazon.com",
 };
 
 export default function Home() {
@@ -89,7 +92,7 @@ export default function Home() {
                     href={logoLinks[logo]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block h-8 w-24 opacity-60 grayscale dark:invert transition-opacity hover:opacity-80"
+                    className="block h-8 opacity-60 grayscale dark:invert transition-opacity hover:opacity-80"
                   >
                     <Image
                       src={`/homelogos/${logo}`}
@@ -97,7 +100,7 @@ export default function Home() {
                       width={96}
                       height={32}
                       unoptimized={isSvg}
-                      className="h-full w-full object-contain"
+                      className="h-full w-auto object-contain"
                     />
                   </Link>
                 );
@@ -106,7 +109,7 @@ export default function Home() {
               return (
                 <div
                   key={logo}
-                  className="h-8 w-24 opacity-60 grayscale dark:invert"
+                  className="h-8 opacity-60 grayscale dark:invert"
                 >
                   <Image
                     src={`/homelogos/${logo}`}
@@ -114,7 +117,7 @@ export default function Home() {
                     width={96}
                     height={32}
                     unoptimized={isSvg}
-                    className="h-full w-full object-contain"
+                    className="h-full w-auto object-contain"
                   />
                 </div>
               );
