@@ -83,6 +83,24 @@ const residents = [
     links: [
       { label: "linkedin.com/in/vivianzou1", href: " https://www.linkedin.com/in/vivianzou1/" },
     ],
+  },
+  {
+    name: "shinnosuke uesaka",
+    photo: "shinnosuke.png",
+    roles: [
+      "3rd year @ minerva",
+      "prev research intern @ sakana ai"
+    ],
+    hobbies: [
+      "sci-fi/horror movies",
+      "hiking",
+      "badminton",
+      "cooking"
+    ],
+    links: [
+      { label: "linkedin.com/in/shinnosuke-u", href: "https://www.linkedin.com/in/shinnosuke-u/" },
+      { label: "x.com/Shinn_Uesaka", href: "https://x.com/Shinn_Uesaka" },
+    ],
   }
 ];
 
