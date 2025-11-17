@@ -12,7 +12,7 @@ const entityLinks: Record<string, string> = {
   aws: "https://aws.amazon.com",
   priceline: "https://priceline.com",
   "bain & co": "https://bain.com",
-  sakana: "https://sakana.ai",
+  "sakana ai": "https://sakana.ai",
   // Universities
   northeastern: "https://northeastern.edu",
   "mit ee": "https://mit.edu",
