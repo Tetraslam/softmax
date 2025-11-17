@@ -79,6 +79,8 @@ const residents = [
     ],
     hobbies: [
       "dance",
+      "pilates",
+      "blind boxes"
     ],
     links: [
       { label: "linkedin.com/in/vivianzou1", href: " https://www.linkedin.com/in/vivianzou1/" },
