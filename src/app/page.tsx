@@ -26,6 +26,7 @@ const logoLinks: Record<string, string> = {
   "osmosis.png": "https://osmosis.ai",
   "notability.png": "https://notability.com",
   "aws.png": "https://aws.amazon.com",
+  "sakana.png": "https://sakana.ai",
 };
 
 export default function Home() {
