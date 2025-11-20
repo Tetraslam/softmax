@@ -27,12 +27,19 @@ const logoLinks: Record<string, string> = {
   "notability.png": "https://notability.com",
   "aws.png": "https://aws.amazon.com",
   "sakana.png": "https://sakana.ai",
+  "bain.png": "https://bain.com",
 };
 
 export default function Home() {
   const logos = getLogos();
+  
+  // Calculate empty cells needed for each breakpoint
+  const emptyCellsMobile = (3 - (logos.length % 3)) % 3;
+  const emptyCellsTablet = (4 - (logos.length % 4)) % 4;
+  const emptyCellsDesktop = (5 - (logos.length % 5)) % 5;
+  
   return (
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
       <div className="space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
@@ -73,9 +80,9 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="pt-8 sm:pt-12 space-y-4">
+        <div className="pt-6 sm:pt-8 space-y-3">
           <p className="text-sm text-muted-foreground">building from</p>
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-start">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border border-border overflow-hidden">
             {logos.map((logo) => {
               const isSvg = logo.endsWith(".svg");
 
@@ -86,7 +93,7 @@ export default function Home() {
                     href={logoLinks[logo]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block h-8 opacity-60 grayscale dark:invert transition-opacity hover:opacity-80"
+                    className="group flex items-center justify-center h-20 sm:h-24 border-r border-b border-border nth-[3n]:border-r-0 sm:nth-[3n]:border-r sm:nth-[4n]:border-r-0 lg:nth-[4n]:border-r lg:nth-[5n]:border-r-0 transition-colors hover:bg-accent/10"
                   >
                     <Image
                       src={`/homelogos/${logo}`}
@@ -94,7 +101,7 @@ export default function Home() {
                       width={96}
                       height={32}
                       unoptimized={isSvg}
-                      className="h-full w-auto object-contain"
+                      className="h-8 w-auto object-contain px-4 opacity-60 grayscale dark:invert transition-opacity group-hover:opacity-100"
                     />
                   </Link>
                 );
@@ -103,7 +110,7 @@ export default function Home() {
               return (
                 <div
                   key={logo}
-                  className="h-8 opacity-60 grayscale dark:invert"
+                  className="flex items-center justify-center h-20 sm:h-24 border-r border-b border-border nth-[3n]:border-r-0 sm:nth-[3n]:border-r sm:nth-[4n]:border-r-0 lg:nth-[4n]:border-r lg:nth-[5n]:border-r-0"
                 >
                   <Image
                     src={`/homelogos/${logo}`}
@@ -111,11 +118,38 @@ export default function Home() {
                     width={96}
                     height={32}
                     unoptimized={isSvg}
-                    className="h-full w-auto object-contain"
+                    className="h-8 w-auto object-contain px-4 opacity-60 grayscale dark:invert"
                   />
                 </div>
               );
             })}
+            
+            {/* Empty cells to fill incomplete rows - mobile (3 cols) */}
+            {emptyCellsMobile > 0 && Array.from({ length: emptyCellsMobile }, (_, i) => (
+              <div
+                key={`empty-mobile-${logos.length}-${i}`}
+                className="h-20 sm:h-24 border-r border-b border-border nth-[3n]:border-r-0 sm:hidden"
+                aria-hidden="true"
+              />
+            ))}
+            
+            {/* Empty cells to fill incomplete rows - tablet (4 cols) */}
+            {emptyCellsTablet > 0 && Array.from({ length: emptyCellsTablet }, (_, i) => (
+              <div
+                key={`empty-tablet-${logos.length}-${i}`}
+                className="hidden sm:block lg:hidden h-20 sm:h-24 border-r border-b border-border sm:nth-[4n]:border-r-0"
+                aria-hidden="true"
+              />
+            ))}
+            
+            {/* Empty cells to fill incomplete rows - desktop (5 cols) */}
+            {emptyCellsDesktop > 0 && Array.from({ length: emptyCellsDesktop }, (_, i) => (
+              <div
+                key={`empty-desktop-${logos.length}-${i}`}
+                className="hidden lg:block h-20 sm:h-24 border-r border-b border-border lg:nth-[5n]:border-r-0"
+                aria-hidden="true"
+              />
+            ))}
           </div>
         </div>
       </div>
