@@ -14,15 +14,15 @@ const residents = [
     hobbies: [
       "worldbuilding",
       "shoegaze rock",
-      "scuba diving",
+      "scuba",
       "kpop",
       "anime",
-      "roguelike videogames",
+      "roguelikes",
     ],
     links: [
       { label: "x.com/tetraslam", href: "https://x.com/tetraslam" },
       {
-        label: "linkedin.com/in/shreshtbhowmick",
+        label: "linkedin.com/in/shr...",
         href: "https://linkedin.com/in/shreshtbhowmick",
       },
       { label: "tetraslam.world", href: "https://tetraslam.world" },
@@ -62,7 +62,7 @@ const residents = [
       "hip-hop/kpop dance",
       "socializing",
       "matcha",
-      "side quest",
+      "side quests",
     ],
     links: [
       { label: "x.com/suxls_", href: "https://x.com/suxls_" },
@@ -94,14 +94,34 @@ const residents = [
       "prev research intern @ sakana ai"
     ],
     hobbies: [
-      "sci-fi/horror movies",
-      "hiking",
+      "sci-fi movies",
       "badminton",
-      "cooking"
+      "cooking",
+      "origami",
+      "piano",
+      "traveling"
     ],
     links: [
       { label: "linkedin.com/in/shinnosuke-u", href: "https://www.linkedin.com/in/shinnosuke-u/" },
       { label: "x.com/Shinn_Uesaka", href: "https://x.com/Shinn_Uesaka" },
+    ],
+  },
+  {
+    name: "kevin thomas",
+    photo: "kevin.png",
+    roles: [
+      "cs @ waterloo",
+      "prev k-scale labs"
+    ],
+    hobbies: [
+      "running",
+      "hiking",
+      "robotics",
+      "cafe hopping"
+    ],
+    links: [
+      { label: "x.com/kevinjosethomas", href: "https://x.com/kevinjosethomas" },
+      { label: "kevinjosethomas.com", href: "https://kevinjosethomas.com/" },
     ],
   }
 ];
