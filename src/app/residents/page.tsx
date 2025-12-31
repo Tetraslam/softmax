@@ -87,23 +87,24 @@ const residents = [
     ],
   },
   {
-    name: "shinnosuke uesaka",
-    photo: "shinnosuke.png",
+    name: "daniel mittelman",
+    photo: "daniel.png",
     roles: [
-      "3rd year @ minerva",
-      "prev research intern @ sakana ai"
+      "swe @ mechanize",
+      "3rd year @ georgia tech",
+      "prev appacella (yc x25), amazon alexa"
     ],
     hobbies: [
-      "sci-fi movies",
-      "badminton",
-      "cooking",
-      "origami",
-      "piano",
-      "traveling"
+      "math",
+      "physics",
+      "robotics",
+      "minecraft",
+      "valorant",
+      "vocaloid"
     ],
     links: [
-      { label: "linkedin.com/in/shinnosuke-u", href: "https://www.linkedin.com/in/shinnosuke-u/" },
-      { label: "x.com/Shinn_Uesaka", href: "https://x.com/Shinn_Uesaka" },
+      { label: "linkedin.com/in/mittelmandaniel", href: "https://www.linkedin.com/in/mittelmandaniel/" },
+      { label: "x.com/anonperson09", href: "https://x.com/anonperson09" },
     ],
   },
   {
