@@ -103,8 +103,9 @@ const residents = [
       "vocaloid"
     ],
     links: [
-      { label: "linkedin.com/in/mittelmandaniel", href: "https://www.linkedin.com/in/mittelmandaniel/" },
       { label: "x.com/anonperson09", href: "https://x.com/anonperson09" },
+      { label: "linkedin.com/in/mittelmandaniel", href: "https://www.linkedin.com/in/mittelmandaniel/" },
+      
     ],
   },
   {
