@@ -23,6 +23,9 @@ const entityLinks: Record<string, string> = {
   // Labs/Organizations
   "mit media lab": "https://media.mit.edu",
   "mit video game orchestra": "https://www.youtube.com/channel/UCVtU0-ALytaxlR68Tv8xZ2g",
+  mechanize: "https://mechanize.work",
+  "georgia tech": "https://gatech.edu",
+  "amazon alexa": "https://alexa.amazon.com",
 };
 
 // Case-insensitive entity matching
