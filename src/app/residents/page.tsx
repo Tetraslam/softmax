@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ResidentPhoto } from "@/components/resident-photo";
 import { linkify } from "@/lib/linkify";
+
+export const metadata: Metadata = {
+  title: "residents — softmax",
+  description: "meet the softmaxxers",
+};
 
 type Resident = {
   name: string;

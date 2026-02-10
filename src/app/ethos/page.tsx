@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ethos — softmax",
+  description:
+    "be kind, do great work, spend time with friends, keep a low ego",
+};
+
 const principles = [
   {
     title: "be kind",

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import fs from "fs";
+
+export const metadata: Metadata = {
+  title: "vibes — softmax",
+  description: "moments from the house",
+};
 import path from "path";
 import { VibesGallery } from "@/components/vibes-gallery";
 

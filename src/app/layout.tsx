@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -16,16 +16,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FDFBF6" },
+    { media: "(prefers-color-scheme: dark)", color: "#3A3328" },
+  ],
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://softmax.house"),
   title: "softmax",
   description: "a cozy hacker home in sf where good people build great things",
   icons: {
     icon: "/favicon.ico",
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FDFBF6" },
-    { media: "(prefers-color-scheme: dark)", color: "#3A3328" },
-  ],
   openGraph: {
     title: "softmax",
     description:

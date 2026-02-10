@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "join us — softmax",
+  description: "apply to live at softmax house in sf",
+};
+
 export default function JoinPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24">
