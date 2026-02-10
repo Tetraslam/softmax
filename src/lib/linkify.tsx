@@ -26,6 +26,7 @@ const entityLinks: Record<string, string> = {
   mechanize: "https://mechanize.work",
   "georgia tech": "https://gatech.edu",
   "amazon alexa": "https://alexa.amazon.com",
+  vercel: "https://vercel.com",
 };
 
 // Case-insensitive entity matching
