@@ -40,7 +40,7 @@ Pages: `/` (home), `/residents`, `/ethos`, `/vibes`, `/calendar`, `/join`, plus 
 
 ### Adding Content
 
-- **Residents**: Add to the `residents` array in `src/app/residents/page.tsx`. Put photo in `public/residents/`. Add any new companies/schools to `entityLinks` in `src/lib/linkify.tsx`.
+- **Residents**: Three sections in `src/app/residents/page.tsx`: `currentResidents`, `pastResidents`, `friends`. Add to the appropriate array. Put photo in `public/residents/`. Add any new companies/schools to `entityLinks` in `src/lib/linkify.tsx`. The `ResidentGrid` component handles layout for all sections — odd-count grids automatically show a `:)` in the empty cell on desktop.
 - **Vibes photos**: Drop images in `public/vibes/`. Optionally add captions in `photoLabels` in `src/app/vibes/page.tsx`.
 - **Homepage logos**: Drop images in `public/homelogos/`. Add URL mapping in `logoLinks` in `src/app/page.tsx`.
 
