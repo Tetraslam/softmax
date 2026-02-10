@@ -62,7 +62,7 @@ export default function VibesPage() {
             vibes
           </h1>
           <p className="text-sm sm:text-base text-muted-foreground">
-            moments from the house (will be filled with those once we move in!)
+            moments from the house
           </p>
         </div>
 
