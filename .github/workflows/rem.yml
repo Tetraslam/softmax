@@ -1,0 +1,16 @@
+name: Rem Security Gate
+on:
+  push:
+    branches: [main]
+
+jobs:
+  rem-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: Tetraslam/re-zero/action@main
+        with:
+          api-key: ${{ secrets.REM_API_KEY }}
+          fail-on: critical, high

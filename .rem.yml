@@ -1,0 +1,6 @@
+ci:
+  trigger: merge_to_main    # merge_to_main | every_pr | manual
+  fail_on: [critical, high]
+
+budget:
+  monthly_limit: 50         # USD, null for no limit
