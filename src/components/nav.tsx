@@ -24,7 +24,7 @@ export function Nav() {
     { href: "/ethos", label: "ethos" },
     { href: "/vibes", label: "vibes" },
     { href: "/calendar", label: "calendar" },
-    { href: "/join", label: "join us" },
+    // { href: "/join", label: "join us" },
   ];
 
   return (
