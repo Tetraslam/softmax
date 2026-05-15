@@ -21,6 +21,16 @@ export default function InfoPage() {
 
         {/* Wifi */}
         <section className="space-y-4">
+          <h2 className="text-xl sm:text-2xl font-semibold">address</h2>
+          <div className="bg-accent/30 rounded-lg p-4 sm:p-6 space-y-1 text-sm sm:text-base">
+            <p>45 Lansing St, Apt 1205</p>
+            <p>San Francisco, CA 94105</p>
+            <p className="text-muted-foreground">(Jasper Apartments)</p>
+          </div>
+        </section>
+
+        {/* Wifi */}
+        <section className="space-y-4">
           <h2 className="text-xl sm:text-2xl font-semibold">wifi</h2>
           <div className="bg-accent/30 rounded-lg p-4 sm:p-6 space-y-1 font-mono text-sm sm:text-base">
             <p>
