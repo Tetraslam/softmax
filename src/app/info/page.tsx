@@ -147,10 +147,10 @@ export default function InfoPage() {
             <p>
               <span className="font-medium">william</span>{" "}
               <a
-                href="tel:4255891998"
+                href="tel:4255025419"
                 className="text-muted-foreground underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition-colors"
               >
-                (425) 589-1998
+                (425) 502-5419
               </a>
             </p>
             <p>
