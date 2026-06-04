@@ -14,6 +14,7 @@ const entityLinks: Record<string, string> = {
   "bain & co": "https://bain.com",
   "sakana ai": "https://sakana.ai",
   "k-scale labs": "https://kscale.dev",
+  "mosaic.so": "https://mosaic.so",
   // Universities
   northeastern: "https://northeastern.edu",
   "mit ee": "https://mit.edu",
@@ -22,14 +23,15 @@ const entityLinks: Record<string, string> = {
   waterloo: "https://uwaterloo.ca",
   // Labs/Organizations
   "mit media lab": "https://media.mit.edu",
-  "mit video game orchestra": "https://www.youtube.com/channel/UCVtU0-ALytaxlR68Tv8xZ2g",
+  "mit video game orchestra":
+    "https://www.youtube.com/channel/UCVtU0-ALytaxlR68Tv8xZ2g",
   mechanize: "https://mechanize.work",
   "georgia tech": "https://gatech.edu",
   "amazon alexa": "https://alexa.amazon.com",
   vercel: "https://vercel.com",
   "computer architecture lab": "https://ece.northeastern.edu/groups/nucar/",
-  "nvidia": "https://nvidia.com",
-  "amd": "https://amd.com",
+  nvidia: "https://nvidia.com",
+  amd: "https://amd.com",
 };
 
 // Case-insensitive entity matching
@@ -45,24 +47,26 @@ function findEntityMatches(text: string): Array<{
     start: number;
     end: number;
   }> = [];
-  
+
   const lowerText = text.toLowerCase();
-  
+
   // Sort entities by length (longest first) to match longer phrases before shorter ones
-  const sortedEntities = Object.keys(entityLinks).sort((a, b) => b.length - a.length);
-  
+  const sortedEntities = Object.keys(entityLinks).sort(
+    (a, b) => b.length - a.length,
+  );
+
   for (const entity of sortedEntities) {
     let startIndex = 0;
-    
+
     while (true) {
       const index = lowerText.indexOf(entity.toLowerCase(), startIndex);
       if (index === -1) break;
-      
+
       // Check if this position is already covered by another match
       const isOverlapping = matches.some(
-        (match) => index >= match.start && index < match.end
+        (match) => index >= match.start && index < match.end,
       );
-      
+
       if (!isOverlapping) {
         matches.push({
           entity,
@@ -71,31 +75,31 @@ function findEntityMatches(text: string): Array<{
           end: index + entity.length,
         });
       }
-      
+
       startIndex = index + entity.length;
     }
   }
-  
+
   // Sort matches by start position
   return matches.sort((a, b) => a.start - b.start);
 }
 
 export function linkify(text: string): ReactNode {
   const matches = findEntityMatches(text);
-  
+
   if (matches.length === 0) {
     return text;
   }
-  
+
   const result: ReactNode[] = [];
   let lastIndex = 0;
-  
+
   for (const match of matches) {
     // Add text before the match
     if (match.start > lastIndex) {
       result.push(text.slice(lastIndex, match.start));
     }
-    
+
     // Add the linked entity
     result.push(
       <Link
@@ -106,17 +110,16 @@ export function linkify(text: string): ReactNode {
         className="text-foreground underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition-colors"
       >
         {text.slice(match.start, match.end)}
-      </Link>
+      </Link>,
     );
-    
+
     lastIndex = match.end;
   }
-  
+
   // Add remaining text
   if (lastIndex < text.length) {
     result.push(text.slice(lastIndex));
   }
-  
+
   return result;
 }
-

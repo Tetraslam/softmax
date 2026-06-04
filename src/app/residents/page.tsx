@@ -21,9 +21,9 @@ const currentResidents: Resident[] = [
     name: "shresht bhowmick",
     photo: "shresht.webp",
     roles: [
-      "founding engineer @ natural.co",
+      "member of technical staff @ stealth neolab",
       "2nd year @ northeastern cs & linguistics",
-      "ml research @ mit media lab",
+      "prev founding eng @ natural.co, ml @ mit media lab, founding intern @ mosaic.so",
     ],
     hobbies: [
       "worldbuilding",
