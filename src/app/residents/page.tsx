@@ -23,7 +23,7 @@ const currentResidents: Resident[] = [
     roles: [
       "member of technical staff @ stealth neolab",
       "2nd year @ northeastern cs & linguistics",
-      "prev founding eng @ natural.co, ml @ mit media lab, founding intern @ mosaic.so",
+      "prev ml @ mit media lab, founding eng @ natural.co, mosaic.so",
     ],
     hobbies: [
       "worldbuilding",
